@@ -1,13 +1,14 @@
-# Mini User Dashboard
+**How to Run the Frontend**
 
-## How to run backend
 
-cd backend
-npm install
-npm run dev
+1. Navigate to frontend folder 
+   cd frontend
 
-## How to run frontend
+2. Install dependencies 
+   npm install
 
-cd frontend
-npm install
-npm run dev
+3. Start the development server 
+   npm run dev 
+
+4. Frontend URL
+   http://localhost:5173
