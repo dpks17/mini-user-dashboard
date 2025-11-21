@@ -1,3 +1,5 @@
+**Backend (Node.js + Express**)
+
 **How to Run the Backend**
 
 1. Navigate to backend folder
@@ -12,6 +14,7 @@
 4. Backend API URL
    http://localhost:4000/api/coins   
 
+**Frontend (React + Vite)**
 
 **How to Run the Frontend**
 
