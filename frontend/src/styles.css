@@ -1,0 +1,119 @@
+:root {
+    --bg: ##F1F1F1;
+    --muted: #666;
+    --positive: #198754;
+    --negative: #dc3545;
+    --bordercolor: #E5E7EB;
+    --heading: #000;
+}
+
+
+[data-theme='dark'] {
+    --bg: #000;
+    --muted: #9fb0c8;
+    --bordercolor: #2A2A2A;
+    --heading: #E5E7EB;
+}
+
+
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0
+}
+
+body {
+    font-family: Inter, system-ui, Arial;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+.app {
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 16px
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.search {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(bordercolor);
+
+}
+
+h1 {
+    color: var(--heading);
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(bordercolor);
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+    color: var(--heading);
+    font-size: x-large;
+    padding-top: 100px;
+
+}
+
+.error {
+    color: #d52424
+}
+
+.table-container {
+    overflow: auto;
+    margin-top: 16px
+}
+
+.coin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.coin-table th,
+.coin-table td {
+    padding: 12px 8px;
+    text-align: left;
+    color:var(--heading)
+}
+
+.coin-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px
+}
+
+.positive {
+    color: var(--positive);
+    font-weight: 600
+}
+
+.negative {
+    color: var(--negative);
+    font-weight: 600
+}
