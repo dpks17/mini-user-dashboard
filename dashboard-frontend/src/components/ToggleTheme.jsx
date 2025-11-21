@@ -1,7 +1,7 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function ToggleTheme() {
-const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
+  const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
 
 
   useEffect(() => {
@@ -11,9 +11,11 @@ const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
   }, [dark]);
 
 
-return (
-<button className="btn" onClick={() => setDark((d) => !d)}>
-{dark ? 'Light' : 'Dark'}
-</button>
-)
+  return (
+    <>
+    <button className="btn" onClick={() => setDark((d) => !d)}>
+      {dark ? 'Light' : 'Dark'}
+    </button>
+    </>
+  )
 }

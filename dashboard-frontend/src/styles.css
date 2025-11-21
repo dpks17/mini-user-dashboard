@@ -98,8 +98,12 @@ h1 {
 
 .coin-cell {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 12px;
+}
+
+.coin-symbol{
+    font-size: smaller;
 }
 
 .logo {

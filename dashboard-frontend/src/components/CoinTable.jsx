@@ -13,11 +13,12 @@ export default function CoinTable({ coins }) {
 
   return (
     <div className="table-container">
-      <table className="coin-table" border={1}  >
+      <table className="coin-table" border={1} >
         <thead>
           <tr>
-            <th>Coin</th>
-            <th>Price (USD)</th>
+            <th>Coin logo</th>
+            <th>Coin name and symbol </th>
+            <th>Current price </th>
             <th>24h</th>
             <th>Market Cap</th>
           </tr>
@@ -25,18 +26,16 @@ export default function CoinTable({ coins }) {
         <tbody >
           {coins.map((c) => (
             <tr key={c.symbol + c.name}>
+              <td><img src={c.img} alt={c.name} className="logo" /></td>
               <td>
                 <div className="coin-cell">
-                {c.img ? <img src={c.img} alt={c.name} className="logo" /> : <div className="logo-placeholder">{c.img}</div>}
-                <div>
-                  <div className="coin-name">{c.name}</div>
-                  <div className="coin-symbol">{c.symbol.toUpperCase()}</div>
-                </div>
+                  <span className="coin-name">{c.name}</span>
+                  <span className="coin-symbol">{c.symbol.toUpperCase()}</span>
                 </div>
               </td>
-              <td>${Number(c.current_price).toLocaleString()}</td>
+              <td>$ {Number(c.current_price).toLocaleString()}</td>
               <td><PriceChange val={c.price_change_percentage_24h} /></td>
-              <td>${Number(c.market_cap).toLocaleString()}</td>
+              <td>$ {Number(c.market_cap).toLocaleString()}</td>
             </tr>
           ))}
         </tbody>

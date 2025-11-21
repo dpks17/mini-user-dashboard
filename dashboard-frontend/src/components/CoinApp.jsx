@@ -34,8 +34,7 @@ export default function CoinApp() {
         fetchCoinsData()
     }, [])
 
-    // Filter the coins list to only include those whose names match the search query (case-insensitive)
-
+    // Filter the coins list to only include those whose names match the search query
     const filtered = coins.filter((c) => c.name.toLowerCase().includes(query.toLowerCase()))
 
     return (
@@ -48,11 +47,11 @@ export default function CoinApp() {
                     <ToggleTheme />
                 </div>
             </header>
-            <main>
+            <>
                 {loading && <div className="center">Loading...</div>}
                 {error && <div className="center error">Error: {error}</div>}
                 {!loading && !error && <CoinTable coins={filtered} />}
-            </main>
+            </>
         </div>
     )
 }
